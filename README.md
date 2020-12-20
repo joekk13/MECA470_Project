@@ -26,7 +26,7 @@ Ian Yasui
 <center>
    <h4> <a href="https://www.csuchico.edu/" target="_blank">California State University Chico</a></h4>
    <h4> <a href="https://www.csuchico.edu/mmem/" target="_blank">Department of Mechanical and Mechatronic Engineering and Advanced Manufacturing</a></h4> 
-   <h4> <a href="./Media/Syllabus.pdf" target="_tab">MECA 470 - Introduction to Robotics</a></h4> 
+   <h4> <a href="./Media/Syllabus.pdf" target="_blank">MECA 470 - Introduction to Robotics</a></h4> 
    <h4> Robotic Collaboration for Timber Construction</h4> 
    <h4> Professor: Hasan Sinan Bank</h4> 
 </center>
@@ -42,7 +42,7 @@ Ian Yasui
 
 ## 1. Introduction 
 
-Despite the advancements in Timber prefabrication using CNC systems, the timber construction system still relies on manual labor in most of its tasks. This handicaps the sector when trying to take advantage of the rapidly spreading trend to use complex digital designs. This is where robotics plays a big role; Robotic systems lead to significant time savings, along with thei ability to transform the processes from manual to automated.<br>
+Despite the advancements in Timber prefabrication using CNC systems, the timber construction system still relies on manual labor in most of its tasks. This handicaps the sector when trying to take advantage of the rapidly spreading trend to use complex digital designs. This is where robotics plays a big role; Robotic systems lead to significant time savings, along with their ability to transform the processes from manual to automated.<br>
 In this project, this group will work on a design to manufacture simulation in CoppeliaSim, along with architecting and designing the complete system and using the robot to assemble the predefined plan at minimum.
 
 ## 2. Mobile Robot Degrees of Freedom
