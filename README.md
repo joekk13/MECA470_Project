@@ -3,7 +3,7 @@
 
 -------------------------------------------------------------------------------------
 
-Mobile Sanitation Robot
+Robotic Collaboration for Timber Construction
 
 <p>
 Project Members:
@@ -25,21 +25,25 @@ Ian Yasui
 
 <center>
    <h4> California State University Chico</h4>
-   <h4> College of Engineering, Computer Science, and Construction Management</h4> 
-   <h4> MECA 470 Introduction to Robotics</h4> 
-   <h4> Mobile Sanitation Robot</h4> 
+   <h4> Department of Mechanical and Mechatronic Engineering and Advanced Manufacturing</h4> 
+   <h4> MECA 470 - Introduction to Robotics</h4> 
+   <h4> Robotic Collaboration for Timber Construction</h4> 
+   <h4> Professor: Hasan Sinan Bank</h4> 
 </center>
 
 #### Table of Contents
+
 - [1. Introduction](#1-Introduction)
 - [2. Mobile Robot Degrees of Freedom (dof)](#2-Mobile-Robot-Degrees-of-Freedom)
-- [3. Mapping and Path Planning with ROS](#3-Mapping-and-Path-Planning-with-ROS) 
-- [4. Coppelia Simulation](#4-Coppelia-Simulation)
+- [3. Coppelia Simulation](#3-Coppelia-Simulation)
+- [4. Connecting ROS to Coppelia](#4-Connecting-ROS-to-Coppelia) 
 - [5. Appendix](#5-Appendix)
 - [6. References](#6-References)
 
 ## 1. Introduction 
-What is this project about and what are we doing 
+
+Despite the advancements in Timber prefabrication using CNC systems, the timber construction system still relies on manual labor in most of its tasks. This handicaps the sector when trying to take advantage of the rapidly spreading trend to use complex digital designs. This is where robotics plays a big role; Robotic systems lead to significant time savings, along with thei ability to transform the processes from manual to automated.
+In this project, this group will work on a design to manufacture simulation in CoppeliaSim, along with architecting and designing the complete system and using the robot to assemble the predefined plan at minimum.
 
 ## 2. Mobile Robot Degrees of Freedom (dof)
 
