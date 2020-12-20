@@ -102,6 +102,7 @@ To implement this system in Coppelia, CAD files were downloaded from the ABB web
                                                                                            
 After the system being initiated, a controller has been created for this system, including 17 knobs, each for a specific Degree of Freedom (GIF at the beginning of this README file). To do so, a code has been written in Coppelia. Since thi code is long because of the system's DoFs, it is not going to be printed below (it is located in CoppeliaCodes/Controller).<br>
 
+
                                          
 
 
