@@ -45,7 +45,7 @@ Ian Yasui
 Despite the advancements in Timber prefabrication using CNC systems, the timber construction system still relies on manual labor in most of its tasks. This handicaps the sector when trying to take advantage of the rapidly spreading trend to use complex digital designs. This is where robotics plays a big role; Robotic systems lead to significant time savings, along with thei ability to transform the processes from manual to automated.<br>
 In this project, this group will work on a design to manufacture simulation in CoppeliaSim, along with architecting and designing the complete system and using the robot to assemble the predefined plan at minimum.
 
-## 2. Mobile Robot Degrees of Freedom (dof)
+## 2. Mobile Robot Degrees of Freedom
 
 The system is composed of three essential component:
 
