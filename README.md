@@ -63,7 +63,7 @@ Where <i>m</i> is the number of DoF of a body (6 for spatial and 3 for planar), 
 For the first system, which includes the <b>"ABB IRBT 2005"</b>, the DoF are calculated:
 
  <p align = "center">
-  <img src = "Media/ABB_IRBT_2005.PNG" "width="500" style="margin:10px 10px">
+  <img src = "Media/ABB_IRBT_2005.PNG" "width="500" height="500" style="margin:10px 10px">
 </p>
       
 
