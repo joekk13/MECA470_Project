@@ -37,8 +37,7 @@ Ian Yasui
 - [2. Mobile Robot Degrees of Freedom](#2-Mobile-Robot-Degrees-of-Freedom)
 - [3. Coppelia Simulation](#3-Coppelia-Simulation)
 - [4. Connecting ROS to Coppelia](#4-Connecting-ROS-to-Coppelia) 
-- [5. Appendix](#5-Appendix)
-- [6. References](#6-References)
+- [5. References](#5-References)
 
 ## 1. Introduction 
 
@@ -247,16 +246,10 @@ Another way to control our Robot in Coppelia was learned using Visual Studio Cod
 ## 4. Connecting ROS to Coppelia
 
 
-## 5. Appendix
-
-A1: Degree of Freedom Calculation: 
-https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-2-degrees-of-freedom-of-a-robot/
-
-A2: Magni Mobile Robot Information: 
-https://www.roboticsbusinessreview.com/robotic-company/directory/listings/ubiquity-robotics/
 
 
-## 6. References
+
+## 5. References
 
 [1] “IRBT 2005 - Medium Track Motion Platform.” ABB, n.d. https://new.abb.com/products/robotics/application-equipment-and-accessories/robot-positioners-track-motion/irbt-2005.<br>
 [2] “IRB 4600 - Industrial Robots: ABB Robotics.” ABB, n.d. https://new.abb.com/products/robotics/industrial-robots/irb-4600.<br>
