@@ -91,7 +91,7 @@ The values for the above formula are as follows:
  After doing all the necessary claculations, the results show thta the whole system has <b>17 DoF</b>.
 
 
-## 3. Mapping and Path Planning with ROS 
+## 3. Coppelia Simulation
 
 Someone needs to describe the use of ROS in the scope of this project 
 
@@ -136,7 +136,7 @@ This transfer function allows us to model the system in Simulink, and enables us
 </p>
 
 
-## 4. Coppelia Simulation 
+## 4. Connecting ROS to Coppelia
 
 The Magni mobile robot was modeled using CoppeliaSim. An illustration of the simulation in addition to the Lua code are both provided below. 
 
