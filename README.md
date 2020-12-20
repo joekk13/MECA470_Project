@@ -18,7 +18,7 @@ Ian Yasui
 
 
 <p align = "center">
-  <img src = "Media/CoppeliaPicture.PNG" height = "320px" style="margin:10px 10px">
+  <img src = "Media/CoppeliaPicture.PNG" "width="500" height="500" style="margin:10px 10px">
 </p>
 
 
@@ -55,7 +55,7 @@ The system is composed of three essential component:
  The goal of this section is calculating the Degrees of Freedom of the whole system before performing the Coppelia Simulation. In order to do so, the book "Modern Robotics"[1] was used, specifically Section 2.2 of Chapter 2 explain the Degrees of Freedom (DoF) of a Robot using the formula below:
  
  <p align = "center">
-  <img src = "Media/DoF_Formula.PNG" "width="250" height="150" style="margin:10px 10px">
+  <img src = "Media/DoF_Formula.PNG" width="250" height="150" style="margin:10px 10px">
 </p>
                                                                                        
 Where <i>m</i> is the number of DoF of a body (6 for spatial and 3 for planar), <i>N</i> is the number of Links (including ground frame as a link), <i>J</i> is the number of Joints, and <i>fi</i> is the number of DoF of the ith joint (this will be the sum of all <i>fi</i>s of the considered system). <br> <p>
@@ -77,7 +77,7 @@ The values for the above formula are as follows:
  For the second system, which includes the <b>"ABB IRB 4600"</b>, the DoF are calculated:
 
  <p align = "center">
-  <img src = "Media/ABB_IRB_4600.PNG" "width="500" height="500" style="margin:10px 10px">
+  <img src = "Media/ABB_IRB_4600.png" "width="500" height="500" style="margin:10px 10px">
 </p>
 
 The values for the above formula are as follows:
