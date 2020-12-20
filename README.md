@@ -65,17 +65,31 @@ For the first system, which includes the <b>"ABB IRBT 2005"</b>, the DoF are cal
  <p align = "center">
   <img src = "Media/ABB_IRBT_2005.jpg" "width="500" height="500" style="margin:10px 10px">
 </p>
-      
 
-The Magni mobile robot operates using a non-holonomic (meaning that its state depends on the path taken in order to achieve) differential drive system in the two front tires. As a differential drive mobile robot it has 3 degrees of freedom: X and Y directions (translational) and around the Z axis (rotational). 
+The values for the above formula are as follows:
 
-When calculating the degrees of freedom for the mobile robot it was useful to reference Chapter 2 of our Modern Robotics textbook [1]. Chapter 2 Section 1 explains the procedure for finding the dof of a rigid body in 3 dimensional space based on its configuration. Specifically finding the dof of our mobile robot can be compared to the mathematical proof of finding the dof of a coin laying on a flat surface. For example the configuration of the coin can be described using two coordinates (x,y), additionally theta can be used to describe the orientation of the coin. Shown below is the mathematical proof for the 3 dof on the coin. 
+<p>-<i>m</i> = 6 , since we are considering this study to be spatial (3D) <br>
+   -<i>N</i> = 6 <br>
+   -<i>J</i> = 5 <br>
+   -<i>fi</i> has 1 for each individual value since all the joints are prismatic joints (sum = 5) <br>
+ We can conclude that the gantry crane that carries the two articulated robots has 5 Degrees of Freedom.<br> <p>
+ 
+ For the second system, which includes the <b>"ABB IRB 4600"</b>, the DoF are calculated:
 
-<p align = "center">
-  <img src = "Images/3DOF.PNG" "width="590" height="440" style="margin:10px 10px">
+ <p align = "center">
+  <img src = "Media/ABB_IRB_4600.PNG" "width="500" height="500" style="margin:10px 10px">
 </p>
-                                                                                 
-As previously states this proof also applies to the dof for the differential drive mobile robot as it has two translational degrees of freedom and one rotational degree of freedom. 
+
+The values for the above formula are as follows:
+
+<p>-<i>m</i> = 6 , since we are considering this study to be spatial (3D) <br>
+   -<i>N</i> = 7 <br>
+   -<i>J</i> = 6 <br>
+   -<i>fi</i> has 1 for each individual value since all the joints are either prismatic or revolute joints (sum = 6) <br>
+ We can conclude that the articulated robots have 6 Degrees of Freedom each, for a total of 12 for both.<br> <p>
+       
+ After doing all the necessary claculations, the results show thta the whole system has <b>17 DoF</b>.
+
 
 ## 3. Mapping and Path Planning with ROS 
 
