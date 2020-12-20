@@ -100,7 +100,10 @@ To implement this system in Coppelia, CAD files were downloaded from the ABB web
   <img src = "Media/CoppeliaPicture.PNG" "width="500" height="500" style="margin:10px 10px">
 </p>
                                                                                            
-After the system being initiated, a controller has been created for this system, including 17 knobs, each for a specific Degree of Freedom (GIF at the beginning of this README file). To do so, a code has been written in Coppelia. Since thi code is long because of the system's DoFs, it is not going to be printed below (it is located in CoppeliaCodes/Controller).<br>
+After the system being initiated, a controller has been created for this system, including 17 knobs, each for a specific Degree of Freedom (GIF at the beginning of this README file). To do so, a code has been written in Coppelia. Since thi code is long because of the system's DoFs, it is not going to be printed below (it is located in CoppeliaCodes/Controller). In addition, the file that has the Coppelia System is located in CoppeliaCodes/Timber_Controller.ttt .<br> <p>
+
+Another way to control our Robot in Coppelia was learned using Visual Studio Code. A code was implemented in VS Code and a connection between VSC and Coppelia has been established in order to control this process. The outcome is very helpful, since there are two ways to control the system now. The code is is located in CoppeliaCodes/VSCode_Controller.py and will be printed below:<br>
+
 
 
                                          
