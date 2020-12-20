@@ -1,3 +1,4 @@
+<p align = "center">
 # MECA470_Project
 ### Robotic Collaboration for Timber Construction
 
@@ -5,13 +6,13 @@
 
 Mobile Sanitation Robot
 
-<p>
+
 Project Members:
 Joe Karam - 
 Jerome Lee -
 Haitham Mohamad -
 Jesse Rath - 
-Ian Yasui`
+Ian Yasui
       </p> 
 
 -------------------------------------------------------------------------------------
