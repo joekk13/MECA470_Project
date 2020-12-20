@@ -18,7 +18,7 @@ Ian Yasui
 
 
 <p align = "center">
-  <img src = "Media/CoppeliaPicture.png" height = "320px" style="margin:10px 10px">
+  <img src = "Media/CoppeliaPicture.PNG" height = "320px" style="margin:10px 10px">
 </p>
 
 
