@@ -26,7 +26,7 @@ Ian Yasui
 <center>
    <h4> <a href="https://www.csuchico.edu/" target="_blank">California State University Chico</a></h4>
    <h4> <a href="https://www.csuchico.edu/mmem/" target="_blank">Department of Mechanical and Mechatronic Engineering and Advanced Manufacturing</a></h4> 
-   <h4> <a href="./Media/Syllabus.pdf" target="_blank">MECA 470 - Introduction to Robotics</a></h4> 
+   <h4> <a href="./Media/Syllabus.pdf" target="_tab">MECA 470 - Introduction to Robotics</a></h4> 
    <h4> Robotic Collaboration for Timber Construction</h4> 
    <h4> Professor: Hasan Sinan Bank</h4> 
 </center>
