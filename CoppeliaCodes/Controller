@@ -1,0 +1,155 @@
+function sysCall_init()
+    
+    CraneActuator=sim.getObjectHandle('CraneActuator')
+    CrabActuator1=sim.getObjectHandle('CrabActuator1')
+    CrabActuator2=sim.getObjectHandle('CrabActuator2')
+    
+    LowerCrab2=sim.getObjectHandle('LowerCrab2')
+    Base_Spinner_2=sim.getObjectHandle('Base_Spinner_2')
+    Link1_Link2_2=sim.getObjectHandle('Link1_Link2_2')
+    Link2_Link3_2=sim.getObjectHandle('Link2_Link3_2')
+    Link3_Link4_2=sim.getObjectHandle('Link3_Link4_2')
+    Link4_Link5_2=sim.getObjectHandle('Link4_Link5_2')
+    Link5_Link6_2=sim.getObjectHandle('Link5_Link6_2')
+    
+    LowerCrab1=sim.getObjectHandle('LowerCrab1')
+    Base_Spinner_1=sim.getObjectHandle('Base_Spinner_1')
+    Link1_Link2_1=sim.getObjectHandle('Link1_Link2_1')
+    Link2_Link3_1=sim.getObjectHandle('Link2_Link3_1')
+    Link3_Link4_1=sim.getObjectHandle('Link3_Link4_1')
+    Link4_Link5_1=sim.getObjectHandle('Link4_Link5_1')
+    Link5_Link6_1=sim.getObjectHandle('Link5_Link6_1')
+   
+ 
+    
+    xml = [[
+<ui title="Position Control" closeable="true" resizable="false" activate="false">
+    <group layout="form" flat="true">
+        <label text="Crane Position (m) : 0.00" id="1"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="45" on-change="ActuateCraneActuator" id="2"/>
+        <label text="Crab 1 Position (m) : 0.00" id="3"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="17" on-change="ActuateCrabActuator1" id="4"/>
+        <label text="Crab 2 Position (m) : 0.00" id="5"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="17" on-change="ActuateCrabActuator2" id="6"/>
+        <label text="Crab 2 lower (m) : 0.00" id="7"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="6" on-change="ActuateLowerCrab2" id="8"/>
+        <label text="Base Spinner 2 (rad) : 0.00" id="9"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateBase_Spinner_2" id="10"/>
+        <label text="Link 1 to Link 2 rev (rad) : 0.00" id="11"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink1_Link2_2" id="12"/>
+        <label text="Link 2 to Link 3 rev (rad) : 0.00" id="13"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink2_Link3_2" id="14"/>
+        <label text="Link 3 to Link 4 rev (rad) : 0.00" id="15"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink3_Link4_2" id="16"/>
+        <label text="Link 4 to Link 5 rev (rad) : 0.00" id="17"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink4_Link5_2" id="18"/>
+        <label text="Link 5 to Link 6 rev (rad) : 0.00" id="19"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink5_Link6_2" id="20"/>
+        
+         <label text="Crab 1 lower (m) : 0.00" id="21"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="6" on-change="ActuateLowerCrab1" id="22"/>
+        <label text="Base Spinner 1 (rad) : 0.00" id="23"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateBase_Spinner_1" id="24"/>
+        <label text="Link 1 to Link 2 rev (rad) : 0.00" id="25"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink1_Link2_1" id="26"/>
+        <label text="Link 2 to Link 3 rev (rad) : 0.00" id="27"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink2_Link3_1" id="28"/>
+        <label text="Link 3 to Link 4 rev (rad) : 0.00" id="29"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink3_Link4_1" id="30"/>
+        <label text="Link 4 to Link 5 rev (rad) : 0.00" id="31"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink4_Link5_1" id="32"/>
+        <label text="Link 5 to Link 6 rev (rad) : 0.00" id="33"/>
+        <hslider tick-position="above" tick-interval="1" minimum="0" maximum="7" on-change="ActuateLink5_Link6_1" id="34"/>
+    </group>
+    <label text="" style="* {margin-left: 400px;}"/>
+</ui>
+]]
+        ui=simUI.create(xml)
+
+
+end
+function ActuateCraneActuator(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(CraneActuator,val)
+     simUI.setLabelText(ui,1,string.format("Crane Position (m) : %.2f",val))
+end
+function ActuateCrabActuator2(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(CrabActuator2,val)
+     simUI.setLabelText(ui,5,string.format("Crab 2 Position (m) : %.2f",val))
+end
+function ActuateCrabActuator1(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(CrabActuator1,val)
+     simUI.setLabelText(ui,3,string.format("Crab 1 Position (m) : %.2f",val))
+end
+function ActuateLowerCrab2(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(LowerCrab2,val)
+     simUI.setLabelText(ui,7,string.format("Crab 2 lower (m) : %.2f",val))
+end
+function ActuateBase_Spinner_2(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Base_Spinner_2,val)
+     simUI.setLabelText(ui,9,string.format("Base Spinner 2 (rad) : %.2f",val))
+end
+function ActuateLink1_Link2_2(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link1_Link2_2,val)
+     simUI.setLabelText(ui,11,string.format("Link 1 to Link 2 rev (rad) : %.2f",val))
+end
+function ActuateLink2_Link3_2(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link2_Link3_2,val)
+     simUI.setLabelText(ui,13,string.format("Link 2 to Link 3 rev (rad) : %.2f",val))
+end
+function ActuateLink3_Link4_2(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link3_Link4_2,val)
+     simUI.setLabelText(ui,15,string.format("Link 3 to Link 4 rev (rad) : %.2f",val))
+end
+function ActuateLink4_Link5_2(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link4_Link5_2,val)
+     simUI.setLabelText(ui,17,string.format("Link 4 to Link 5 rev (rad) : %.2f",val))
+end
+function ActuateLink5_Link6_2(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link5_Link6_2,val)
+     simUI.setLabelText(ui,19,string.format("Link 5 to Link 6 rev (rad) : %.2f",val))
+end
+function ActuateLowerCrab1(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(LowerCrab1,val)
+     simUI.setLabelText(ui,21,string.format("Crab 1 lower (m) : %.2f",val))
+end
+function ActuateBase_Spinner_1(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Base_Spinner_1,val)
+     simUI.setLabelText(ui,23,string.format("Base Spinner 1 (rad) : %.2f",val))
+end
+function ActuateLink1_Link2_1(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link1_Link2_1,val)
+     simUI.setLabelText(ui,25,string.format("Link 1 to Link 2 rev (rad) : %.2f",val))
+end
+function ActuateLink2_Link3_1(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link2_Link3_1,val)
+     simUI.setLabelText(ui,27,string.format("Link 2 to Link 3 rev (rad) : %.2f",val))
+end
+function ActuateLink3_Link4_1(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link3_Link4_1,val)
+     simUI.setLabelText(ui,29,string.format("Link 3 to Link 4 rev (rad) : %.2f",val))
+end
+function ActuateLink4_Link5_1(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link4_Link5_1,val)
+     simUI.setLabelText(ui,31,string.format("Link 4 to Link 5 rev (rad) : %.2f",val))
+end
+function ActuateLink5_Link6_1(ui,id,newVal)
+     local val = 1*newVal
+     sim.setJointTargetPosition(Link5_Link6_1,val)
+     simUI.setLabelText(ui,33,string.format("Link 5 to Link 6 rev (rad) : %.2f",val))
+end
