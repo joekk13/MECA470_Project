@@ -34,7 +34,7 @@ Ian Yasui
 #### Table of Contents
 
 - [1. Introduction](#1-Introduction)
-- [2. Mobile Robot Degrees of Freedom (dof)](#2-Mobile-Robot-Degrees-of-Freedom)
+- [2. Mobile Robot Degrees of Freedom](#2-Mobile-Robot-Degrees-of-Freedom)
 - [3. Coppelia Simulation](#3-Coppelia-Simulation)
 - [4. Connecting ROS to Coppelia](#4-Connecting-ROS-to-Coppelia) 
 - [5. Appendix](#5-Appendix)
