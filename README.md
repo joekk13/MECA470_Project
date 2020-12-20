@@ -1,4 +1,3 @@
-<p align = "center">
 # MECA470_Project
 ### Robotic Collaboration for Timber Construction
 
@@ -6,7 +5,7 @@
 
 Mobile Sanitation Robot
 
-
+<p>
 Project Members:
 Joe Karam - 
 Jerome Lee -
@@ -19,7 +18,7 @@ Ian Yasui
 
 
 <p align = "center">
-  <img src = "Images/MagniinCoppelia.png" height = "320px" style="margin:10px 10px">
+  <img src = "Media/CoppeliaPicture.png" height = "320px" style="margin:10px 10px">
 </p>
 
 
