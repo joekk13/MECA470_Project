@@ -18,7 +18,7 @@ Ian Yasui
 
 
 <p align = "center">
-  <img src = "Media/CoppeliaGit.gif" "width="500" height="500" style="margin:10px 10px">
+  <img src = "Media/CoppeliaGif.gif" "width="500" height="500" style="margin:10px 10px">
 </p>
 
 
