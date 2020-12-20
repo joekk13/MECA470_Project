@@ -18,7 +18,7 @@ Ian Yasui
 
 
 <p align = "center">
-  <img src = "Media/CoppeliaPicture.PNG" "width="500" height="500" style="margin:10px 10px">
+  <img src = "Media/CoppeliaGif.gif" "width="500" height="500" style="margin:10px 10px">
 </p>
 
 
@@ -92,6 +92,16 @@ The values for the above formula are as follows:
 
 
 ## 3. Coppelia Simulation
+
+CoppeliaSim is the program used for the Robotic Simulation of this Project. It runs faster and has more features than V-REP (which is what it is formerly known as). <br>
+To implement this system in Coppelia, CAD files were downloaded from the ABB website [2][3], and were transferred to a .ttt file using a Solidworks to URDF exporter toolbox. Afterwards, the system was generated as seen in the snip below:
+
+<p align = "center">
+  <img src = "Media/CoppeliaPicture.PNG" "width="500" height="500" style="margin:10px 10px">
+</p>
+
+
+
 
 Someone needs to describe the use of ROS in the scope of this project 
 
