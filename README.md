@@ -42,7 +42,7 @@ Ian Yasui
 
 ## 1. Introduction 
 
-Despite the advancements in Timber prefabrication using CNC systems, the timber construction system still relies on manual labor in most of its tasks. This handicaps the sector when trying to take advantage of the rapidly spreading trend to use complex digital designs. This is where robotics plays a big role; Robotic systems lead to significant time savings, along with thei ability to transform the processes from manual to automated.
+Despite the advancements in Timber prefabrication using CNC systems, the timber construction system still relies on manual labor in most of its tasks. This handicaps the sector when trying to take advantage of the rapidly spreading trend to use complex digital designs. This is where robotics plays a big role; Robotic systems lead to significant time savings, along with thei ability to transform the processes from manual to automated.<br>
 In this project, this group will work on a design to manufacture simulation in CoppeliaSim, along with architecting and designing the complete system and using the robot to assemble the predefined plan at minimum.
 
 ## 2. Mobile Robot Degrees of Freedom (dof)
@@ -57,8 +57,14 @@ The system is composed of three essential component:
  <p align = "center">
   <img src = "Media/DoF_Formula.PNG" "width="250" height="150" style="margin:10px 10px">
 </p>
-      
- 
+                                                                                       
+Where <i>m</i> is the number of DoF of a body (6 for spatial and 3 for planar), <i>N</i> is the number of Links (including ground frame as a link), <i>J</i> is the number of Joints, and <i>fi</i> is the number of DoF of the ith joint (this will be the sum of all <i>fi</i>s of the considered system). <br> <p>
+
+For the first system, which includes the <b>"ABB IRBT 2005"</b>, the DoF are calculated:
+
+ <p align = "center">
+  <img src = "Media/ABB_IRBT_2005.PNG" "width="500" style="margin:10px 10px">
+</p>
       
 
 The Magni mobile robot operates using a non-holonomic (meaning that its state depends on the path taken in order to achieve) differential drive system in the two front tires. As a differential drive mobile robot it has 3 degrees of freedom: X and Y directions (translational) and around the Z axis (rotational). 
