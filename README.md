@@ -47,6 +47,20 @@ In this project, this group will work on a design to manufacture simulation in C
 
 ## 2. Mobile Robot Degrees of Freedom (dof)
 
+The system is composed of three essential component:
+
+<p>-The Gantry Crane which has the <b>"ABB IRBT 2005"</b> as its main constituent. <br>
+   -Two Articulated Robots <b>"ABB IRB 4600"</b>; These two robots are carried by the Gantry crane. </br> <p>
+      
+ The goal of this section is calculating the Degrees of Freedom of the whole system before performing the Coppelia Simulation. In order to do so, the book "Modern Robotics"[1] was used, specifically Section 2.2 of Chapter 2 explain the Degrees of Freedom (DoF) of a Robot using the formula below:
+ 
+ <p align = "center">
+  <img src = "Media/DoF_Formula.PNG" "width="250" height="150" style="margin:10px 10px">
+</p>
+      
+ 
+      
+
 The Magni mobile robot operates using a non-holonomic (meaning that its state depends on the path taken in order to achieve) differential drive system in the two front tires. As a differential drive mobile robot it has 3 degrees of freedom: X and Y directions (translational) and around the Z axis (rotational). 
 
 When calculating the degrees of freedom for the mobile robot it was useful to reference Chapter 2 of our Modern Robotics textbook [1]. Chapter 2 Section 1 explains the procedure for finding the dof of a rigid body in 3 dimensional space based on its configuration. Specifically finding the dof of our mobile robot can be compared to the mathematical proof of finding the dof of a coin laying on a flat surface. For example the configuration of the coin can be described using two coordinates (x,y), additionally theta can be used to describe the orientation of the coin. Shown below is the mathematical proof for the 3 dof on the coin. 
