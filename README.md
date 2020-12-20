@@ -49,10 +49,10 @@ In this project, this group will work on a design to manufacture simulation in C
 
 The system is composed of three essential component:
 
-<p>-The Gantry Crane which has the <b>"ABB IRBT 2005"</b> as its main constituent. <br>
-   -Two Articulated Robots <b>"ABB IRB 4600"</b>; These two robots are carried by the Gantry crane. </br> <p>
+<p>-The Gantry Crane which has the <b>"ABB IRBT 2005"</b>[1] as its main constituent. <br>
+   -Two Articulated Robots <b>"ABB IRB 4600"</b>[2]; These two robots are carried by the Gantry crane. </br> <p>
       
- The goal of this section is calculating the Degrees of Freedom of the whole system before performing the Coppelia Simulation. In order to do so, the book "Modern Robotics"[1] was used, specifically Section 2.2 of Chapter 2 explain the Degrees of Freedom (DoF) of a Robot using the formula below:
+ The goal of this section is calculating the Degrees of Freedom of the whole system before performing the Coppelia Simulation. In order to do so, the book "Modern Robotics"[3] was used, specifically Section 2.2 of Chapter 2 explain the Degrees of Freedom (DoF) of a Robot using the formula below:
  
  <p align = "center">
   <img src = "Media/DoF_Formula.PNG" width="250" height="150" style="margin:10px 10px">
@@ -94,7 +94,7 @@ The values for the above formula are as follows:
 ## 3. Coppelia Simulation
 
 CoppeliaSim is the program used for the Robotic Simulation of this Project. It runs faster and has more features than V-REP (which is what it is formerly known as). <br>
-To implement this system in Coppelia, CAD files were downloaded from the ABB website [2][3], and were transferred to a .ttt file using a Solidworks to URDF exporter toolbox. Afterwards, the system was generated as seen in the snip below:
+To implement this system in Coppelia, CAD files were downloaded from the ABB website [1][2], and were transferred to a .ttt file using a Solidworks to URDF exporter toolbox. Afterwards, the system was generated as seen in the snip below:
 
 <p align = "center">
   <img src = "Media/CoppeliaPicture.PNG" "width="500" height="500" style="margin:10px 10px">
@@ -258,7 +258,10 @@ https://www.roboticsbusinessreview.com/robotic-company/directory/listings/ubiqui
 
 ## 6. References
 
-[1] Lynch, K., &amp; Park, F. C. (2019). Modern robotics: Mechanics, planning, and control. Cambridge, United Kingdom: Cambridge University Press.
+[1] “IRBT 2005 - Medium Track Motion Platform.” ABB, n.d. https://new.abb.com/products/robotics/application-equipment-and-accessories/robot-positioners-track-motion/irbt-2005.<br>
+[2] “IRB 4600 - Industrial Robots: ABB Robotics.” ABB, n.d. https://new.abb.com/products/robotics/industrial-robots/irb-4600.<br>
+[3] Lynch, Kevin M., and Frank C. Park. Modern Robotics: Mechanics, Planning, and Control. Cambridge, United Kingdom: Cambridge University Press, 2019.<br>
+[4] Willmann, Jan, Michael Knauss, Tobias Bonwetsch, Anna Aleksandra Apolinarska, Fabio Gramazio, and Matthias Kohler. “Robotic Timber Construction — Expanding Additive Fabrication               to New Dimensions.” Automation in Construction 61 (2016): 16–23. https://doi.org/10.1016/j.autcon.2015.09.011.<br>
+[5] Thoma, Andreas, Arash Adel, Matthias Helmreich, Thomas Wehrle, Fabio Gramazio, and Matthias Kohler. “Robotic Fabrication of Bespoke Timber Frame Modules.” Robotic Fabrication in Architecture, Art and Design 2018, 2018, 447–58. https://doi.org/10.1007/978-3-319-92294-2_34.<br>
+[6] “Robotic Collaboration in Timber Construction.” ETH Zurich, March 22, 2018. https://ethz.ch/en/news-and-events/eth-news/news/2018/03/spatial-timber-assemblies.html.<br> 
 
-
-<a href="https://github.com/janso2000/MECHA470_Mobile_Sanitation_Robot"> Click here to go to our project repository </a>
