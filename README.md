@@ -246,37 +246,6 @@ Another way to control our Robot in Coppelia was learned using Visual Studio Cod
 
 ## 4. Connecting ROS to Coppelia
 
-The Magni mobile robot was modeled using CoppeliaSim. An illustration of the simulation in addition to the Lua code are both provided below. 
-
-       function sysCall_init()
-            left_wheel=sim.getObjectHandle('Magni_LeftMotor')
-            right_wheel=sim.getObjectHandle('Magni_RightMotor')
-             xml = [[
-                         <ui title="Speed Control" closeable="true" resizable="false" activate="false">
-                         <group layout="form" flat="true">
-                         <label text="Left Wheel (rad/s): 0.00" id="1"/>
-                         <hslider tick-position="above" tick-interval="1" minimum="-10" maximum="10" on-change="actuateLeft" id="2"/>
-                  <label text="Right Wheel (rad/s): 0.00" id="3"/>
-        <hslider tick-position="above" tick-interval="1" minimum="-10" maximum="10" on-change="actuateRight" id="4"/>
-    </group>
-    <label text="" style="* {margin-left: 400px;}"/>
-      </ui>
-      ]]
-        ui=simUI.create(xml)
-    end
-    
-    function actuateLeft(ui,id,newVal)
-            local val = 0.5*newVal
-            sim.setJointTargetVelocity(left_wheel,val)
-            simUI.setLabelText(ui,1,string.format("Left Wheel (rad/s): %.2f",val))
-      end
-
-     function actuateRight(ui,id,newVal)
-            local val = 0.5*newVal
-            sim.setJointTargetVelocity(right_wheel,val)
-            simUI.setLabelText(ui,3,string.format("Right Wheel (rad/s): %.2f",val))
-      end
-
 
 ## 5. Appendix
 
