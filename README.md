@@ -41,17 +41,17 @@ Ian Yasui
 
 ## 1. Introduction 
 
-Despite the advancements in Timber prefabrication using CNC systems, the timber construction system still relies on manual labor in most of its tasks. This handicaps the sector when trying to take advantage of the rapidly spreading trend to use complex digital designs. This is where robotics plays a big role; Robotic systems lead to significant time savings, along with their ability to transform the processes from manual to automated.<br>
-In this project, this group will work on a design to manufacture simulation in CoppeliaSim, along with architecting and designing the complete system and using the robot to assemble the predefined plan at minimum.
+Despite the advancements in Timber prefabrication using CNC systems, the timber construction system still relies on manual labor in most of its tasks. This handicaps the sector when trying to take advantage of the rapidly spreading trend to use complex digital designs. This is where robotics plays a big role; Robotic systems lead to significant time savings, along with their ability to transform the processes from manual to automated. Researchers from ETH Zurich are using a new method for digital timber construction in a real project for the first time [1][2][3].<br>
+In this project, this group will work on a design to manufacture a simulation in CoppeliaSim, along with architecting and designing the complete system and using the robot to assemble the predefined plan at minimum.
 
 ## 2. Mobile Robot Degrees of Freedom
 
 The system is composed of three essential component:
 
-<p>-The Gantry Crane which has the <b>"ABB IRBT 2005"</b>[1] as its main constituent. <br>
-   -Two Articulated Robots <b>"ABB IRB 4600"</b>[2]; These two robots are carried by the Gantry crane. </br> <p>
+<p>-The Gantry Crane which has the <b>"ABB IRBT 2005"</b>[4] as its main constituent. <br>
+   -Two Articulated Robots <b>"ABB IRB 4600"</b>[5]; These two robots are carried by the Gantry crane. </br> <p>
       
- The goal of this section is calculating the Degrees of Freedom of the whole system before performing the Coppelia Simulation. In order to do so, the book "Modern Robotics"[3] was used, specifically Section 2.2 of Chapter 2 explain the Degrees of Freedom (DoF) of a Robot using the formula below:
+ The goal of this section is calculating the Degrees of Freedom of the whole system before performing the Coppelia Simulation. In order to do so, the book "Modern Robotics"[6] was used, specifically Section 2.2 of Chapter 2 explain the Degrees of Freedom (DoF) of a Robot using the formula below:
  
  <p align = "center">
   <img src = "Media/DoF_Formula.PNG" width="250" height="150" style="margin:10px 10px">
@@ -71,7 +71,7 @@ The values for the above formula are as follows:
    -<i>N</i> = 6 <br>
    -<i>J</i> = 5 <br>
    -<i>fi</i> has 1 for each individual value since all the joints are prismatic joints (sum = 5) <br>
- We can conclude that the gantry crane that carries the two articulated robots has 5 Degrees of Freedom.<br> <p>
+It is concluded that the gantry crane that carries the two articulated robots has 5 Degrees of Freedom.<br> <p>
  
  For the second system, which includes the <b>"ABB IRB 4600"</b>, the DoF are calculated:
 
@@ -93,7 +93,7 @@ The values for the above formula are as follows:
 ## 3. Coppelia Simulation
 
 CoppeliaSim is the program used for the Robotic Simulation of this Project. It runs faster and has more features than V-REP (which is what it is formerly known as). <br>
-To implement this system in Coppelia, CAD files were downloaded from the ABB website [1][2], and were transferred to a .ttt file using a Solidworks to URDF exporter toolbox. Afterwards, the system was generated as seen in the snip below:
+To implement this system in Coppelia, CAD files were downloaded from the ABB website [4][5], and were transferred to a .ttt file using a Solidworks to URDF exporter toolbox. Afterwards, the system was generated as seen in the snip below:
 
 <p align = "center">
   <img src = "Media/CoppeliaPicture.PNG" "width="500" height="500" style="margin:10px 10px">
@@ -101,7 +101,7 @@ To implement this system in Coppelia, CAD files were downloaded from the ABB web
                                                                                            
 After the system being initiated, a controller has been created for this system, including 17 knobs, each for a specific Degree of Freedom (GIF at the beginning of this README file). To do so, a code has been written in Coppelia. Since this code is long because of the system's DoFs, it is not going to be printed below (it is located in <a href="./CoppeliaCodes/Controller" target="_blank">Controller</a>). In addition, the file that has the whole Coppelia System is located in <a href="./CoppeliaCodes/Timber_Controller.ttt" target="_blank">Timber Controller</a>.<br> <p>
 
-Another way to control our Robot in Coppelia was learned using Visual Studio Code. A code was implemented in VS Code and a connection between VSC and Coppelia has been established in order to control this process. The outcome is very helpful, since there are two ways to control the system now. The code is is located in <a href="./CoppeliaCodes/VSCode_Controller.py" target="_blank">VSCode Controller</a> and will be printed below:<br>
+Another way to control our Robot in Coppelia was learned using Visual Studio Code. A code was implemented in VS Code and a connection between VSC and Coppelia has been established in order to control this process. The outcome is very helpful, since there are two ways to control the system now. The code is is located in <a href="./CoppeliaCodes/VSCode_Controller.py" target="_blank">VSCode Controller</a> (the file used with it should be <a href="./CoppeliaCodes/Timber_ROS_Coppelia.ttt" target="_blank">Timber </a>)and will be printed below:<br>
 
       import numpy as np
       import sim
@@ -266,10 +266,10 @@ Now the last step is running the Coppelia Simulation and typing the required cod
 
 ## 5. References
 
-[1] “IRBT 2005 - Medium Track Motion Platform.” ABB, n.d. https://new.abb.com/products/robotics/application-equipment-and-accessories/robot-positioners-track-motion/irbt-2005.<br>
-[2] “IRB 4600 - Industrial Robots: ABB Robotics.” ABB, n.d. https://new.abb.com/products/robotics/industrial-robots/irb-4600.<br>
-[3] Lynch, Kevin M., and Frank C. Park. Modern Robotics: Mechanics, Planning, and Control. Cambridge, United Kingdom: Cambridge University Press, 2019.<br>
-[4] Willmann, Jan, Michael Knauss, Tobias Bonwetsch, Anna Aleksandra Apolinarska, Fabio Gramazio, and Matthias Kohler. “Robotic Timber Construction — Expanding Additive Fabrication               to New Dimensions.” Automation in Construction 61 (2016): 16–23. https://doi.org/10.1016/j.autcon.2015.09.011.<br>
-[5] Thoma, Andreas, Arash Adel, Matthias Helmreich, Thomas Wehrle, Fabio Gramazio, and Matthias Kohler. “Robotic Fabrication of Bespoke Timber Frame Modules.” Robotic Fabrication in Architecture, Art and Design 2018, 2018, 447–58. https://doi.org/10.1007/978-3-319-92294-2_34.<br>
-[6] “Robotic Collaboration in Timber Construction.” ETH Zurich, March 22, 2018. https://ethz.ch/en/news-and-events/eth-news/news/2018/03/spatial-timber-assemblies.html.<br> 
+[1] Willmann, Jan, Michael Knauss, Tobias Bonwetsch, Anna Aleksandra Apolinarska, Fabio Gramazio, and Matthias Kohler. “Robotic Timber Construction — Expanding Additive Fabrication               to New Dimensions.” Automation in Construction 61 (2016): 16–23. https://doi.org/10.1016/j.autcon.2015.09.011.<br>
+[2] Thoma, Andreas, Arash Adel, Matthias Helmreich, Thomas Wehrle, Fabio Gramazio, and Matthias Kohler. “Robotic Fabrication of Bespoke Timber Frame Modules.” Robotic Fabrication in Architecture, Art and Design 2018, 2018, 447–58. https://doi.org/10.1007/978-3-319-92294-2_34.<br>
+[3] “Robotic Collaboration in Timber Construction.” ETH Zurich, March 22, 2018. https://ethz.ch/en/news-and-events/eth-news/news/2018/03/spatial-timber-assemblies.html.<br> 
+[4] “IRBT 2005 - Medium Track Motion Platform.” ABB, n.d. https://new.abb.com/products/robotics/application-equipment-and-accessories/robot-positioners-track-motion/irbt-2005.<br>
+[5] “IRB 4600 - Industrial Robots: ABB Robotics.” ABB, n.d. https://new.abb.com/products/robotics/industrial-robots/irb-4600.<br>
+[6] Lynch, Kevin M., and Frank C. Park. Modern Robotics: Mechanics, Planning, and Control. Cambridge, United Kingdom: Cambridge University Press, 2019.<br>
 
