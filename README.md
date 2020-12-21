@@ -245,8 +245,23 @@ Another way to control our Robot in Coppelia was learned using Visual Studio Cod
 
 ## 4. Connecting ROS to Coppelia
 
+In this section, the goal is controlling CoppeliaSim (formerly known as V-Rep) from a Virtual Instance of ROS (Robot Operating System), all running within Windows. In order to do so, part of a <a href="./Media/vrep_ros_connect.pdf" target="_blank">tutorial</a> was followed (some adjustments have been added, highlighted in yellow in the pdf, to make it work)(This tutorial was given to this group from the instructor of this class). A procedure was used in order to configure a Windows-based host machine and a Linux-based guest machine to establish a TCP connection between the two. <br>
+The same .ttt file has been used as the one from the second controller discussed in the section before. This <a href="./CoppeliaCodes/Timber_ROS_Coppelia.ttt" target="_blank">Coppelia File</a> has the exact same system as the <a href="./CoppeliaCodes/Timber_Controller.ttt" target="_blank">Timber Controller</a>, but with a different script.<br>
+After the connection has been established, a folder by the name of <b>vrepy</b> is created inside ROS as seen in the figure below:
 
+<p align = "center">
+  <img src = "Media/vrepy.PNG" "width="500" height="500" style="margin:10px 10px">
+</p>
 
+Now the last step is running the Coppelia Simulation and typing the required code in the ROS terminal. Finally, this is what it will liik like:
+
+<p align = "center">
+  <img src = "Media/ROS_GIF.gif" "width="500" height="500" style="margin:10px 10px">
+</p>
+                                                                                 
+<p align = "center">
+  <img src = "Media/Coppelia(ROS)_GIF.gif" "width="500" height="500" style="margin:10px 10px">
+</p>
 
 
 ## 5. References
